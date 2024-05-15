@@ -2,13 +2,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import "./style.css";
 
 function CreateUsers() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  // eslint-disable-next-line no-unused-vars
+  const [name, setName] = useState();
+  // eslint-disable-next-line no-unused-vars
+  const [email, setEmail] = useState();
+  // eslint-disable-next-line no-unused-vars
+  const [phone, setPhone] = useState();
   const navigate = useNavigate();
 
   const Submit = (e) => {
@@ -20,11 +22,6 @@ function CreateUsers() {
         navigate("/");
       })
       .catch((err) => console.log(err));
-  };
-
-  const handleLinkClick = (e) => {
-    e.preventDefault();
-    Submit(e);
   };
 
   return (
@@ -73,9 +70,8 @@ function CreateUsers() {
               onChange={(e) => setPhone(e.target.value)}
             />
           </div>
-          <Link
-            to="/"
-            onClick={handleLinkClick}
+          <button
+            type="submit"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -85,7 +81,7 @@ function CreateUsers() {
             className="btnStyleCase"
           >
             Submit
-          </Link>
+          </button>
         </form>
       </div>
     </div>
