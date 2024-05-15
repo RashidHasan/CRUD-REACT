@@ -74,7 +74,6 @@ function CreateUsers() {
             />
           </div>
           <Link
-            to="/"
             onClick={handleLinkClick}
             style={{
               display: "flex",
