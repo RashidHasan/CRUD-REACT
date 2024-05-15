@@ -70,18 +70,20 @@ function CreateUsers() {
               onChange={(e) => setPhone(e.target.value)}
             />
           </div>
-          <button
-            type="submit"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "left",
-              marginTop: "30px",
-            }}
-            className="btnStyleCase"
-          >
-            Submit
-          </button>
+          <a>
+            <button
+              type="submit"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "left",
+                marginTop: "30px",
+              }}
+              className="btnStyleCase"
+            >
+              Submit
+            </button>
+          </a>
         </form>
       </div>
     </div>
