@@ -57,8 +57,10 @@ function Users() {
           <Link
             style={{
               marginBottom: "10px",
-              transform: "translateX(-223px)",
-              padding: "10px",
+              transform: "translateX(-20px)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "left",
             }}
             to="/create"
             className="btnStyleCase"
@@ -98,7 +100,9 @@ function Users() {
                       <td>
                         <Link
                           style={{
-                            margin: "10px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "left",
                           }}
                           to={`/update/${user._id}`}
                           className="btnStyleCase"
