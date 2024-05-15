@@ -11,19 +11,14 @@ function Users() {
 
   useEffect(() => {
     axios
-      .get(
-        "https://crud-react-ri5o-n2qtifvg5-rashids-projects-da3a7bb7.vercel.app/"
-      )
-      .then((result) => setUsers(result.data))
+      .get("http://localhost:3001")
+      .then((resilt) => setUsers(resilt.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (id) => {
     axios
-      .delete(
-        "https://crud-react-ri5o-n2qtifvg5-rashids-projects-da3a7bb7.vercel.app/deleteUser/" +
-          id
-      )
+      .delete("http://localhost:3001/deleteUser/" + id)
       .then((res) => {
         console.log(res);
         window.location.reload();

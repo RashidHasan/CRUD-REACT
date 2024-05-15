@@ -16,10 +16,7 @@ function CreateUsers() {
   const Submit = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "https://crud-react-ri5o-n2qtifvg5-rashids-projects-da3a7bb7.vercel.app/createUser",
-        { name, email, phone }
-      )
+      .post("http://localhost:3001/createUser", { name, email, phone })
       .then((result) => {
         console.log(result);
         navigate("/");
