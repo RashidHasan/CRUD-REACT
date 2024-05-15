@@ -6,11 +6,11 @@ import "./style.css";
 
 function CreateUsers() {
   // eslint-disable-next-line no-unused-vars
-  const [name, setName] = useState("");
+  const [name, setName] = useState();
   // eslint-disable-next-line no-unused-vars
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState();
   // eslint-disable-next-line no-unused-vars
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState();
   const navigate = useNavigate();
 
   const Submit = (e) => {

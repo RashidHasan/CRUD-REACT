@@ -39,7 +39,7 @@ function UpdateUser() {
     e.preventDefault();
     axios
       .put(
-        "https://crud-react-ri5o-n2qtifvg5-rashids-projects-da3a7bb7.vercel.app/getUser/updateUser/" +
+        "https://crud-react-ri5o-n2qtifvg5-rashids-projects-da3a7bb7.vercel.app/updateUser/" +
           id,
         { name, email, phone }
       )
