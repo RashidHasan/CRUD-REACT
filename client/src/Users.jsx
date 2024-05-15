@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./style.css";
 
@@ -54,7 +54,7 @@ function Users() {
           </div>
         </div>
         <div className="BoxCRUD">
-          {/* <Link
+          <Link
             style={{
               marginBottom: "10px",
               transform: "translateX(-223px)",
@@ -64,9 +64,9 @@ function Users() {
             className="btnStyleCase"
           >
             Add +
-          </Link> */}
+          </Link>
 
-          <a href="/create">
+          {/* <a href="/create">
             <button
               style={{
                 marginBottom: "10px",
@@ -76,7 +76,7 @@ function Users() {
             >
               Add Employee
             </button>
-          </a>
+          </a> */}
           <table className="table">
             <thead>
               <tr>
@@ -96,7 +96,7 @@ function Users() {
                       <td>{user.email}</td>
                       <td>{user.phone}</td>
                       <td>
-                        {/* <Link
+                        <Link
                           style={{
                             margin: "10px",
                           }}
@@ -104,9 +104,9 @@ function Users() {
                           className="btnStyleCase"
                         >
                           Update
-                        </Link> */}
+                        </Link>
 
-                        <a href={`/update/${user._id}`}>
+                        {/* <a href={`/update/${user._id}`}>
                           <button
                             style={{
                               margin: "10px",
@@ -116,7 +116,7 @@ function Users() {
                           >
                             Update
                           </button>
-                        </a>
+                        </a> */}
                         <button
                           className="btnStyleCase2"
                           onClick={() => handleDelete(user._id)}
