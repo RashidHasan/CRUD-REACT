@@ -58,6 +58,6 @@ app.post("/createUser", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-app.listen(3001, () => {
-  console.log("Server is Running on port 3001");
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to my Express server!</h1>");
 });
