@@ -58,6 +58,4 @@ app.post("/createUser", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-app.get("/", (req, res) => {
-  res.send("<h1>Welcome to my Express server!</h1>");
-});
+app.get("/", console.log("<h1>Welcome to my Express server!</h1>"));
