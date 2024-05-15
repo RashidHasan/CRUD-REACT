@@ -14,7 +14,7 @@ function Users() {
       .get(
         "https://crud-react-ri5o-n2qtifvg5-rashids-projects-da3a7bb7.vercel.app/"
       )
-      .then((resilt) => setUsers(resilt.data))
+      .then((result) => setUsers(result.data))
       .catch((err) => console.log(err));
   }, []);
 
