@@ -15,15 +15,18 @@ function CreateUsers() {
 
   const Submit = (e) => {
     e.preventDefault();
+    console.log("Submitting form with data:", { name, email, phone });
     axios
-      .post("http://localhost:3001/createUser", { name, email, phone })
+      .post(`${window.location.origin}/createUser`, { name, email, phone })
       .then((result) => {
-        console.log(result);
+        console.log("Response from server:", result);
         navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.error("Error submitting form:", err);
+      });
   };
-
+  
   return (
     <div className="d-flex vh-100 justify-content-center align-items-center">
       <div className="w-50 bg-white rounded p-3">

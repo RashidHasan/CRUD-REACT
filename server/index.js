@@ -1,11 +1,19 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors"); // Import the cors middleware
-const UserModel = require("./models/Users");
+const cors = require('cors'); // Import the cors middleware
+const express = require('express');
+const mongoose = require('mongoose');
+const UserModel = require('./models/Users');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+
+const corsOptions = {
+  origin: 'https://crud-react-ri5o.vercel.app',
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
 
 mongoose
   .connect(
