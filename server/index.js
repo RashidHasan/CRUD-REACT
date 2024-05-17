@@ -7,14 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-const corsOptions = {
-  origin: 'https://crud-react-ri5o.vercel.app',
-  optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
-
-
 mongoose
   .connect(
     "mongodb+srv://rashedmycourses:7nXwg3bmK9MPxuhva@cluster0.6jywxwd.mongodb.net/crud?retryWrites=true&w=majority&appName=Cluster0",

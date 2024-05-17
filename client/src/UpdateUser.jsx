@@ -12,17 +12,17 @@ function UpdateUser() {
   // eslint-disable-next-line no-unused-vars
   const { id } = useParams();
   // eslint-disable-next-line no-unused-vars
-  const [name, setName] = useState('');
+  const [name, setName] = useState();
   // eslint-disable-next-line no-unused-vars
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState();
   // eslint-disable-next-line no-unused-vars
-  const [phone, setPhone] = useState('');
+  const [phone, setPhone] = useState();
   // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get(`${window.location.origin}/getUser/` + id)
+      .get("http://localhost:3001/getUser/" + id)
       .then((resilt) => {
         console.log(resilt);
         setName(resilt.data.name);
@@ -35,7 +35,7 @@ function UpdateUser() {
   const Update = (e) => {
     e.preventDefault();
     axios
-      .put(`${window.location.origin}/updateUser/` + id, { name, email, phone })
+      .put("http://localhost:3001/updateUser/" + id, { name, email, phone })
       .then((result) => {
         console.log(result);
         navigate("/");
