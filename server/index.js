@@ -1,6 +1,6 @@
+const cors = require('cors'); // Import the cors middleware
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors"); // Import the cors middleware
 const UserModel = require("./models/Users");
 
 const app = express();
