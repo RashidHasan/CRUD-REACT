@@ -11,14 +11,14 @@ function Users() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001")
+      .get("https://crud-react-ri5o.vercel.app/")
       .then((resilt) => setUsers(resilt.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3001/deleteUser/" + id)
+      .delete("https://crud-react-ri5o.vercel.app/deleteUser/" + id)
       .then((res) => {
         console.log(res);
         window.location.reload();

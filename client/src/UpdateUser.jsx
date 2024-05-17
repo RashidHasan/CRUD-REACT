@@ -22,7 +22,7 @@ function UpdateUser() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getUser/" + id)
+      .get("https://crud-react-ri5o.vercel.app/getUser/" + id)
       .then((resilt) => {
         console.log(resilt);
         setName(resilt.data.name);
@@ -35,7 +35,7 @@ function UpdateUser() {
   const Update = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3001/updateUser/" + id, { name, email, phone })
+      .put("https://crud-react-ri5o.vercel.app/updateUser/" + id, { name, email, phone })
       .then((result) => {
         console.log(result);
         navigate("/");
