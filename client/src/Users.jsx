@@ -11,20 +11,22 @@ function Users() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001")
-      .then((resilt) => setUsers(resilt.data))
+      .get("https://crud-react-ri5o.vercel.app")
+      .then((result) => setUsers(result.data))
       .catch((err) => console.log(err));
   }, []);
+  
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3001/deleteUser/" + id)
+      .delete(`https://crud-react-ri5o.vercel.app/deleteUser/${id}`)
       .then((res) => {
         console.log(res);
         window.location.reload();
       })
-      .catch((errr) => console.log(errr));
+      .catch((err) => console.log(err));
   };
+  
 
   return (
     <>

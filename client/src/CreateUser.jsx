@@ -16,13 +16,14 @@ function CreateUsers() {
   const Submit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/createUser", { name, email, phone })
+      .post("https://crud-react-ri5o.vercel.app/createUser", { name, email, phone })
       .then((result) => {
         console.log(result);
         navigate("/");
       })
       .catch((err) => console.log(err));
   };
+  
 
   return (
     <div className="d-flex vh-100 justify-content-center align-items-center">
