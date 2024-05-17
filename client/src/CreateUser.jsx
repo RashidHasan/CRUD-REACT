@@ -1,21 +1,24 @@
-  // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./style.css";
 
 function CreateUsers() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  // eslint-disable-next-line no-unused-vars
+  const [name, setName] = useState();
+  // eslint-disable-next-line no-unused-vars
+  const [email, setEmail] = useState();
+  // eslint-disable-next-line no-unused-vars
+  const [phone, setPhone] = useState();
   const navigate = useNavigate();
 
   const Submit = (e) => {
     e.preventDefault();
     axios
-      .post("https://crud-react-ri5o.vercel.app/createUser", { name, email, phone })
-        // eslint-disable-next-line no-unused-vars
+      .post("http://localhost:3001/createUser", { name, email, phone })
       .then((result) => {
+        console.log(result);
         navigate("/");
       })
       .catch((err) => console.log(err));
@@ -25,9 +28,19 @@ function CreateUsers() {
     <div className="d-flex vh-100 justify-content-center align-items-center">
       <div className="w-50 bg-white rounded p-3">
         <form onSubmit={Submit}>
-          <h2>Add Employee</h2>
+          <h2
+            style={{
+              marginBottom: "50px",
+              display: "flex",
+              fontWeight: "bold",
+            }}
+          >
+            Add Employee
+          </h2>
           <div className="mb-2">
-            <label>Name</label>
+            <label style={{ margin: "10px", display: "flex" }} htmlFor="">
+              Name
+            </label>
             <input
               type="text"
               placeholder="Enter Name"
@@ -36,7 +49,9 @@ function CreateUsers() {
             />
           </div>
           <div className="mb-2">
-            <label>Email</label>
+            <label style={{ margin: "10px", display: "flex" }} htmlFor="">
+              Email
+            </label>
             <input
               type="email"
               placeholder="Enter Email"
@@ -45,7 +60,9 @@ function CreateUsers() {
             />
           </div>
           <div className="mb-2">
-            <label>Phone</label>
+            <label style={{ margin: "10px", display: "flex" }} htmlFor="">
+              Phone
+            </label>
             <input
               type="text"
               placeholder="Enter Phone Number"
@@ -53,7 +70,18 @@ function CreateUsers() {
               onChange={(e) => setPhone(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button
+            type="submit"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "left",
+              marginTop: "30px",
+            }}
+            className="btnStyleCase"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
